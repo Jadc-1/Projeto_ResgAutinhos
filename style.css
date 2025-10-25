@@ -1,11 +1,24 @@
+/* Importação de fonts */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+/* Font poppins */
+
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap'); /* MontSerrat */
+
+* {
+    /*configuração geral*/
+    margin: 0;
+    padding: 0;
+}
+
 /* Header */
 header {
     display: flex;
     flex-direction: column;
     align-items: center;
-    padding: 1rem;
     background-color: #fff;
 }
+
+
 
 /* Título do site (oculto em telas pequenas se quiser) */
 .main-title {
@@ -20,30 +33,73 @@ header {
     justify-content: space-between;
     align-items: center;
     width: 100%;
-    max-width: 1200px;
-    /* limite de largura */
+    padding: 1.5em;
+    background-color: #FFF8F8;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
 }
 
+
+
 /* Logo */
+.logo {
+    margin-left: 3em;
+}
+
 .logo img {
-    max-width: 150px;
+    max-width: 100px;
     height: auto;
 }
 
+
+
 /* Menu principal */
+
+.main-nav {
+    margin-right: 3em;
+    /*Adicionei a mesma margem para logo e menu nav*/
+}
+
 .main-nav .menu {
     list-style: none;
     display: flex;
-    gap: 1.5rem;
+    align-items: center;
+    gap: 3rem;
     margin: 0;
-    padding: 0;
+
+}
+
+.main-nav .menu li button {
+    align-items: center;
+    border-radius: 15px;
+    border: none;
+    padding: 1.3em;
+    color: white;
+    font-family: "Poppins", sans-serif;
+    font-size: 16px;
+    font-weight: 700;
+    background-color: #E38BAE;
+    transition: 200ms;
+}
+
+
+.main-nav .menu li button:hover {
+    background-color: white;
+    color: #E38BAE;
+    border: 1px solid #E38BAE;
+    scale: calc(1.03);
 }
 
 .main-nav .menu li a {
     text-decoration: none;
-    color: #2F2A4A;
-    /* cor exemplo */
-    font-weight: 600;
+    color: #4A4A4A;
+    font-family: "Poppins", sans-serif;
+    font-weight: 700;
+    transition: 200ms;
+}
+
+.main-nav .menu li a:hover {
+    /* Cor ao passar o mouse */
+    color: #E38BAE;
 }
 
 /* Botão menu mobile */
@@ -56,6 +112,78 @@ header {
     cursor: pointer;
 }
 
+#main-container {
+    height: 100vh;
+}
+
+/* Conteúdo principal (primeira imagem) */
+#secao-bv {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 55em;
+    background-image: url('imagens/Foto_Principal.jpg');
+    background-position: top; /* Centraliza a imagem */
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+}
+
+.texto-main {
+    align-items: center;
+    justify-content: center;
+}
+
+.sub-titulo-bv {
+    text-align: center;
+    color: #E38BAE;
+    font-family: "Poppins", sans-serif;
+    font-size: 13px;
+    letter-spacing: 1.2em;
+    font-weight: 600;
+    padding-bottom: 1.5em;
+}
+
+.texto-principal {
+    text-align: center;
+    color: #C8A2C8;
+    font-family: "Montserrat", sans-serif;
+    font-weight: 900;
+    font-size: 56px;
+    padding-bottom: 0.7em;
+}
+
+.subtitulo-principal {
+    text-align: center;
+    color: white;
+    font-family: "Montserrat", sans-serif;
+    font-size: 16px;
+    font-weight: 300;
+    margin-bottom: 6em;
+}
+
+.botao-contato-main button{
+    display: inline-flex;
+    border-radius: 15px;
+    border: none;
+    padding: 1.1em;
+    color: white;
+    font-family: "Poppins", sans-serif;
+    font-size: 16px;
+    font-weight: 700;
+    background-color: #d684a5;
+    transition: 200ms;
+}
+
+.botao-contato-main button img{
+    width: 25px;
+    padding-left: 0.7em;
+}
+
+.botao-contato-main button:hover {
+    scale: calc(1.03);
+}
 
 /* Responsividade para mobile */
 @media (max-width: 768px) {

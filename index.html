@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
-    <title>Document</title>
+    <title>Projeto ResgAutinhos - ONG de cuidados animais</title>
 </head>
 
 <body>
@@ -34,14 +34,27 @@
                     <li><a href="#ajudar">Como ajudar</a></li>
                     <li><a href="#campanhas">Campanhas</a></li>
                     <li><a href="#animais">Animais para adoção</a></li>
-                    <li><a href="#contato">Entre em contato</a></li>
+                    <li><button onclick="irParaContatos()">Entre em contato</button></li>
                 </ul>
             </nav>
 
         </div>
     </header>
 
+    <main id="main-container">
+        <div id="secao-bv">
+            <div class = "texto-main">
+                <h3 class = "sub-titulo-bv">BEM-VINDO</h3>
+                <h1 class = "texto-principal">Cuidando de quem só <br> precisa de amor</h1>
+                <h2 class = "subtitulo-principal">No Projeto ResgAUtinhos, damos uma nova chance para cães e gatos abandonados encontrarem um lar cheio de carinho.</h2>
+            </div>
+            <div class = "botao-contato-main">
+                <button onclick="irParaContatos()">Entre em contato<img src="imagens/seta-direita.png" alt="seta"></img></button>
+            </div>
+        </div>
+    </main>
 
+    <script src="main.js"></script>
 </body>
 
 </html>
