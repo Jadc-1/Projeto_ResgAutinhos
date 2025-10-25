@@ -29,8 +29,8 @@
 
                 <!-- Lista de links do menu -->
                 <ul class="menu">
-                    <li><a href="#inicio">Início</a></li>
-                    <li><a href="#sobre">Sobre nós</a></li>
+                    <li><a href="#header-container">Início</a></li>
+                    <li><a href="#sobre-container">Sobre nós</a></li>
                     <li><a href="#ajudar">Como ajudar</a></li>
                     <li><a href="#campanhas">Campanhas</a></li>
                     <li><a href="#animais">Animais para adoção</a></li>
@@ -41,18 +41,50 @@
         </div>
     </header>
 
+    <!--Primeira section da landing page, imagem-->
     <main id="main-container">
         <div id="secao-bv">
-            <div class = "texto-main">
-                <h3 class = "sub-titulo-bv">BEM-VINDO</h3>
-                <h1 class = "texto-principal">Cuidando de quem só <br> precisa de amor</h1>
-                <h2 class = "subtitulo-principal">No Projeto ResgAUtinhos, damos uma nova chance para cães e gatos abandonados encontrarem um lar cheio de carinho.</h2>
+            <div class="texto-main">
+                <h3 class="sub-titulo-bv">BEM-VINDO</h3>
+                <h1 class="texto-principal">Cuidando de quem só <br> precisa de amor</h1>
+                <h2 class="subtitulo-principal">No Projeto ResgAUtinhos, damos uma nova chance para cães e gatos
+                    abandonados encontrarem um lar cheio de carinho.</h2>
             </div>
-            <div class = "botao-contato-main">
-                <button onclick="irParaContatos()">Entre em contato<img src="imagens/seta-direita.png" alt="seta"></img></button>
+            <div class="botao-contato-main">
+                <button onclick="irParaContatos()">Entre em contato<img src="imagens/seta-direita.png"
+                        alt="seta"></img></button>
             </div>
         </div>
     </main>
+
+    <!--Segunda section da landing page, Sobre a ONG-->
+    <section id="sobre-container">
+        <section id="imagem-sobre">
+            <img src="imagens/imagem_sobre.jpg" alt="equipe">
+        </section>
+        <aside id="aside-sobre">
+            <p>Sobre o projeto<span style="color:#ce5159; font-weight:700;"> ResgAutinhos</span></p>
+            <p>O <span class="destaque-vermelho">Projeto ResgAutinhos</span> atua em <span class="destaque-roxo">Vinhedo
+                    (SP)</span> com a missão de <span class="destaque-vermelho">resgatar</span>, <span
+                    class="destaque-vermelho">cuidar</span> e encontrar <span class="destaque-vermelho">lares
+                    responsáveis</span> para cães e gatos em situação de
+                abandono.
+            </p>
+
+            <p>Criado por um grupo de <span class="destaque-roxo">voluntários apaixonados por
+                    animais</span>, o projeto cresceu com o apoio da comunidade e hoje realiza <span
+                    class="destaque-vermelho">resgates</span>, <span class="destaque-vermelho">campanhas de
+                    adoção</span> e ações de <span class="destaque-roxo">conscientização sobre guarda
+                    responsável</span>.
+            </p>
+
+            <p>Com <span class="destaque-vermelho">amor</span>, <span class="destaque-roxo">ética</span> e <span
+                    class="destaque-vermelho">compromisso com a vida</span>, o Resgautinhos trabalha para
+                que cada animal tenha a chance de viver com <span class="destaque-roxo">dignidade e
+                    carinho</span>. 💗
+            </p>
+        </aside>
+    </section>
 
     <script src="main.js"></script>
 </body>
