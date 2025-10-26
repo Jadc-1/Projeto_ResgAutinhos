@@ -225,19 +225,37 @@ header {
     justify-content: center;
     align-items: center;
     width: 50%;
+    margin-left: 40px;
 }
 
 #imagem-sobre img {
-    width: 30em;
+    width: 35em;
     height: auto;
-    margin: 5em;
     margin-top: 15em;
+    margin-left: 15em;
     border-radius: 15px;
     box-shadow: 0px 0px 7px 1px;
 }
 
 #aside-sobre {
-    width: 50%;
+    display: flex;
+    flex-direction: column;
+    width: 30%;
+    height: 25em;
+    margin-right: 5em;
+    overflow-wrap: anywhere;
+    font-family: "Montserrat", sans-serif
+}
+
+.titulo-sobre {
+    margin-bottom: 70px;
+    font-weight: 900;
+    font-size: 45px;
+    color: #2F2A4A;
+}
+
+#aside-sobre p {
+    font-size: 18px;
 }
 
 .destaque-vermelho {
@@ -250,6 +268,15 @@ header {
     color: #2F2A4A;
     font-weight: 600;
 }
+
+#svg-sobre {
+    margin-top: 3em;
+    width: 100%;
+}
+
+
+/*Section como ajudar */
+
 
 /* Responsividade para mobile */
 @media (max-width: 1024px) {
