@@ -60,7 +60,9 @@ Dessa forma, o site se mantém **funcional, profissional e acessível**, sem com
 **Versão atual (WordPress):**
 - WordPress  
 - Elementor  
-- MetForm  
+- MetForm
+- UAE
+- WP Mail STMP 
 
 ---
 
@@ -73,10 +75,10 @@ Com uma estrutura moderna e otimizada, a ONG agora consegue **gerenciar seu pró
 
 ## 📬 Contato
 
-📧 [projetoresgautinhos@gmail.com](mailto:projetoresgautinhos@gmail.com)  
 📸 [Instagram: @projeto_resgautinhos](https://www.instagram.com/projeto_resgautinhos)  
 
 ---
 
 ### 💖 Desenvolvido com dedicação para apoiar quem dá voz a quem não tem.
+
 
