@@ -1,7 +1,5 @@
 # 🐾 Projeto ResgAutinhos
 
-![Capa do Projeto](https://i.imgur.com/xxxxxxxx.png) <!-- (opcional: substituir por imagem real se quiser) -->
-
 ## 🌟 Sobre o Projeto
 
 O **Projeto ResgAutinhos** é uma iniciativa sem fins lucrativos que atua na cidade de **Vinhedo (SP)** com a missão de **resgatar, cuidar e promover a adoção responsável de animais**.  
@@ -81,3 +79,4 @@ Com uma estrutura moderna e otimizada, a ONG agora consegue **gerenciar seu pró
 ---
 
 ### 💖 Desenvolvido com dedicação para apoiar quem dá voz a quem não tem.
+
