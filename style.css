@@ -15,6 +15,10 @@ html {
     scroll-behavior: smooth;
 }
 
+body,html {
+    overflow-x: hidden;
+}
+
 /* Header */
 header {
     display: flex;
@@ -34,6 +38,8 @@ header {
 
 /* Container interno: logo + menu */
 .header-container {
+    position: fixed;
+    z-index: 9999;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -449,9 +455,7 @@ header {
     border-radius: 5px;
     padding: 5px;
     background-color: #2F2A4A;
-    position: relative;
     transition: transform 0.2s ease-in-out;
-    z-index: 999;
     margin-left: 1em;
 }
 
@@ -459,10 +463,8 @@ header {
     transform: rotate(0) scale(1.1);
 }
 #campanha2 img {
-    position: absolute;
     width: 22em;
     margin-left: -10em;
-    z-index: 999;
     border-radius: 5px;
     padding: 5px;
     background-color: #2F2A4A;
@@ -471,16 +473,133 @@ header {
 
 #campanha2 img:hover {
     transform: scale(1.1);
-    z-index: 999;
 }
 
+
+/*Section animais */
+
+#animais-container {
+    background-color: #F7F0EA;
+    padding: 0 35px;
+}
+
+.animais-titulo {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.animais-titulo h1{
+    padding-top: 75px;
+    padding-bottom: 0px;
+    font-weight: 900;
+    font-family: "Montserrat", sans-serif;
+    font-size: 45px;
+    color: #2F2A4A;
+}
+
+.wrapper {
+    max-width: 1920px;
+    width: 100%;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    scroll-behavior: smooth; 
+}
+
+
+.wrapper i {
+    height: 50px;
+    width: 50px;
+    background-color: #2F2A4A;
+    color: white;
+    text-align: center;
+    line-height: 50px;
+    border-radius: 50%;
+    cursor: pointer;
+    position: absolute;
+    top: 50%;
+    font-size: 1.25rem;
+    transform: translateY(-50%);
+    box-shadow: 0 3px 6px rgba(0, 0, 0, 0.23);
+}
+
+.wrapper i:first-child {
+    left: -5px;
+}
+
+.wrapper i:last-child {
+    right: -5px;
+}
+
+.wrapper .cartoes {
+    display: grid;
+    grid-auto-flow: column;
+    gap: 16px;
+    overflow-x: auto;
+    scroll-snap-type: x mandatory;
+    scroll-behavior: smooth;
+    scrollbar-width: none;
+}
+
+
+.cartoes::-webkit-scrollbar {
+    display: none;
+}
+
+.cartoes.arrastando {
+    scroll-behavior: auto;
+    scroll-snap-type: none;
+}
+
+.cartoes.sem-transicao {
+    scroll-behavior: auto;
+}
+
+.cartoes.arrastando .cartao {
+    cursor: grab;
+    user-select: none;
+}
+
+.cartoes :where(.cartao, .img) {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.cartoes .cartao {
+    scroll-snap-align: start;
+    list-style: none;
+    background: #fff;
+}
+
+.cartoes .cartao img {
+    width: 435px;
+    height: auto;
+    object-fit: cover;
+    border-radius: 8px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+
+
+
 /* Responsividade para mobile */
-@media (max-width: 1024px) {
+@media screen and (max-width: 1024px) {
 
     body {
         overflow-x: hidden;
     }
 
+    #masthead {
+        z-index: 9999;
+    }
 
     /* Configurações para melhor design header */
 
@@ -500,8 +619,9 @@ header {
         flex-direction: column;
         align-items: start;
         padding-left: 25px;
+        margin-left: 15px;
         padding-top: 25px;
-        padding-bottom: -5px;
+        padding-bottom: -10px;
         top: 113.2px;
         left: 0px;
         width: 100%;
@@ -511,6 +631,7 @@ header {
         /* Isso move o menu para fora da tela, possibilitando a animação */
         transition: transform 0.3s ease-in;
     }
+
 
     .menu-celular {
         display: block;
@@ -526,8 +647,8 @@ header {
         background: none;
         color: #4A4A4A;
         transition: 200ms;
-        margin-top: -28px;
-        margin-left: -17px;
+        padding: 0;
+        padding-bottom: 20px;
     }
 
     .main-nav .menu li button:hover {
@@ -595,9 +716,11 @@ header {
     /*Section sobre */
     #sobre-container {
         display: flex;
+        flex-wrap: wrap;
         flex-direction: column;
         padding: 0;
         width: 100%;
+        height: 80em;
         margin: 0;
         margin-top: -7em;
         border-radius: 50px;
@@ -605,6 +728,9 @@ header {
 
     #imagem-sobre {
         display: flex;
+        margin: 0;
+        justify-content: center;
+        margin-top: 10em;
     }
 
     #imagem-sobre img {
@@ -615,11 +741,143 @@ header {
         height: auto;
     }
     
+    #aside-sobre {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        width: 90%;       /* 👈 ocupa toda a largura da tela */
+        height: auto;      /* 👈 ajusta a altura automaticamente */
+        margin: 0 auto;    /* 👈 centraliza no eixo horizontal */
+    }
+
+    .titulo-sobre {
+        margin: 0;
+    }
+
     #aside-sobre h1 {
-        font-size: 16px;
+        margin: 0;
+        margin-top: 20px;
+        font-size: 35px;    
+        justify-content: center;
+        text-align: center;
+        margin-bottom: 2em;
+        
+    }
+
+    #aside-sobre p {
+        font-size: 15px;
+        line-height: 1.8;
+        text-align: justify;
+    }
+
+    /*Section Como ajudar */
+
+    #svg-sobre,
+    #svg-ajuda {
+        display: block;
+        margin-bottom: -5px; /* cola a onda na próxima seção */
+    }
+
+    #svg-sobre {
+        margin: 0;
+        margin-top: -2em;
+    }
+
+    #ajudar-container {
+        margin-top: -12em;
+        display: flex;
+        flex-direction: column;
+        height: 110em;
+        justify-content: center;
+        align-items: center;
+    }
+
+    #ajudar-blocos {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+    #ajudar-blocos div {
+        margin-top: 0;
+        height: 20em;
     }
     
+    #ajudar-texto {
+        padding: 0;
+        padding-top: 0;
+    }
+
+
+       /* CAMPANHAS — Ajuste geral */
+    #campanhas-container {
+        display: flex;
+        flex-direction: column; /* empilha o texto e imagens */
+        align-items: center;
+        justify-content: center;
+        height: auto; /* ajusta dinamicamente a altura */
+        background-color: #F6D3D3;
+        padding: 0;
+        padding-top: 5em;
+        margin-top: -5.8em;
+        text-align: center;
+    }
+
+    #campanhas-texto {
+        align-items: center;
+        width: 100%;
+        max-width: 90%;
+        margin: 0 auto 3em auto;
+        padding: 0;
+    }
+
+    #campanhas-texto h1 {
+        font-size: 35px;
+    }
+
+    #campanhas-texto p {
+        font-size: 16px;
+        line-height: 1.6;
+    }
+
+    /* Bloco de imagens */
+    #campanhas-imagens {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        gap: 2em;
+        margin: 0;
+    }
+
+    #campanha1 img,
+    #campanha2 img {
+        width: 80%;
+        max-width: 350px;
+        margin: 0 auto;
+        transform: none;
+        position: relative;
+        border-radius: 10px;
+        padding: 4px;
+        background-color: #2F2A4A;
+        transition: transform 0.2s ease;
+    }
+
+    #campanha1 img:hover,
+    #campanha2 img:hover {
+        transform: scale(1.05);
+    }
+
+    /* Corrige sobreposição da segunda imagem */
+    #campanha2 img {
+        margin-left: 0;
+    }
+
+
+
 }
+
 
 @media (max-width: 728px) {
     .main-nav .menu {
