@@ -48,29 +48,29 @@ const arrastarParar = () => {
 }
 
 const autoPlay = () => {
-    if(window.innerWidth < 800) return; //retorna se a janela for menor que 800
+    if (window.innerWidth < 800) return; //retorna se a janela for menor que 800
     //Da autoplay no carrossel a cada 2,5 s
-    timeoutId = setTimeout(() => cartoes.scrollLeft += larguraPrimeiroCard, 2500);
+    timeoutId = setTimeout(() => cartoes.scrollLeft += larguraPrimeiroCard, 2000);
 };
 
 
 
 const scrollInfinito = () => {
     // Se o carrossel de imagens está no começo, scrolla até o final
-    if(cartoes.scrollLeft === 0) {
+    if (cartoes.scrollLeft === 0) {
         cartoes.classList.add("sem-transicao");
-        cartoes.scrollLeft = cartoes.scrollWidth - (2 *cartoes.offsetWidth);
+        cartoes.scrollLeft = cartoes.scrollWidth - (2 * cartoes.offsetWidth);
         cartoes.classList.remove("sem-transicao");
-    //Se o carrossel de imagens está no final, scrolla até o começo
-    } else if(Math.ceil(cartoes.scrollLeft) === cartoes.scrollWidth - cartoes.offsetWidth) {
+        //Se o carrossel de imagens está no final, scrolla até o começo
+    } else if (Math.ceil(cartoes.scrollLeft) === cartoes.scrollWidth - cartoes.offsetWidth) {
         cartoes.classList.add("sem-transicao");
         cartoes.scrollLeft = cartoes.offsetWidth;
-        cartoes.classList.remove("sem-transicao");  
+        cartoes.classList.remove("sem-transicao");
     }
 
     //Se o mouse não está em hover no carrossel, da autoplay nele e limpa o autoplay existente
     clearTimeout(timeoutId);
-    if(!wrapper.matches(":hover"))
+    if (!wrapper.matches(":hover"))
         autoPlay();
 };
 
